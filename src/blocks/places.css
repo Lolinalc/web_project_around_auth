@@ -1,0 +1,108 @@
+.places {
+  max-width: 880px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: auto;
+  padding: 40px;
+}
+.places__trash {
+  width: 18px;
+  height: 19.3px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px;
+}
+.places__trash:hover {
+  cursor: pointer;
+  opacity: 50%;
+}
+
+.places__cards {
+  width: 282px;
+  height: 361px;
+  border-radius: 8px;
+  background-color: white;
+  position: relative;
+}
+.places__image {
+  width: 282px;
+  height: 282px;
+  border-radius: 8px 8px 0 0;
+}
+.places__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto 20px;
+}
+.places__description {
+  color: black;
+  font-family: "Inter";
+  font-weight: 900;
+  font-size: 24px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.places__like {
+  background-image: url(../images/heart.svg);
+  width: 21px;
+  height: 19px;
+  color: black;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px;
+}
+.places__like_not-active {
+  background-image: url(../images/heart.svg);
+  width: 21px;
+  height: 19px;
+  color: black;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px;
+}
+.places__like_active {
+  background-image: url(../images/circulo.png);
+  width: 21px;
+  height: 19px;
+  color: black;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px;
+}
+.places__like:hover {
+  cursor: pointer;
+  opacity: 50%;
+}
+.places__like:active {
+  cursor: pointer;
+  color: black;
+  fill: black;
+}
+
+@media screen and (min-width: 768px) and (max-width: 930px) {
+  .places {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .places {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+}
