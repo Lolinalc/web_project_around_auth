@@ -29,6 +29,7 @@
   border-radius: 8px;
   background-color: white;
   position: relative;
+  list-style-type: none;
 }
 .places__image {
   width: 282px;

@@ -3,8 +3,8 @@ import CurrentUserContext from "../../../../../contexts/CurrentUserContext.js";
 
 export default function NewCard() {
   const { handleAddCard } = useContext(CurrentUserContext);
-  const [titleNewCard, setTitleNewCard] = useState({});
-  const [linkNewCard, setLinkNewCard] = useState({});
+  const [titleNewCard, setTitleNewCard] = useState("");
+  const [linkNewCard, setLinkNewCard] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();

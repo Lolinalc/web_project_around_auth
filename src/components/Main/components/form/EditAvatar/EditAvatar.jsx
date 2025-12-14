@@ -2,13 +2,16 @@ import { useContext, useRef } from "react";
 import CurrentUserContext from "../../../../../contexts/CurrentUserContext.js";
 
 export default function EditAvatar() {
-  const { currentUser, handleUpdateAvatar } = useContext(CurrentUserContext);
-  const avatarRef = useRef(currentUser.avatar);
+  const { handleUpdateAvatar } = useContext(CurrentUserContext);
+  const avatarRef = useRef();
 
   function handleSubmit(e) {
     e.preventDefault();
 
-    handleUpdateAvatar({ avatar: avatarRef.current.value.trim() });
+    const avatarValue = avatarRef.current.value.trim();
+    if (avatarValue) {
+      handleUpdateAvatar({ avatar: avatarValue });
+    }
   }
 
   return (
@@ -25,8 +28,7 @@ export default function EditAvatar() {
           id="avatar"
           name="avatar"
           ref={avatarRef}
-          onChange={handleUpdateAvatar}
-          defaultValue={currentUser.avatar || ""}
+          defaultValue=""
           required
           placeholder="Enlace de la imagen"
         />

@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:3000";
+const BASE_URL = "http://localhost:3001";
 
 // Función para verificar la respuesta del servidor
 const checkResponse = (res) => {

@@ -5,11 +5,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build vite",
     "dev": "vite --open",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
     "normalize.css": "^8.0.1",

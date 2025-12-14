@@ -127,20 +127,17 @@ export default function Main({
           +
         </button>
       </section>
-
       <section className="places">
-        <ul className="cards__list">
-          {cards.map((card) => (
-            <Card
-              key={card._id}
-              card={card}
-              onCardClick={handleCardClick}
-              onCardLike={handleCardLike}
-              onCardDelete={handleCardDelete}
-              isDeleting={deletingId === card._id}
-            />
-          ))}
-        </ul>
+        {cards.map((card) => (
+          <Card
+            key={card._id}
+            card={card}
+            onImageClick={handleCardClick}
+            onCardLike={handleCardLike}
+            onCardDelete={handleCardDelete}
+            isDeleting={deletingId === card._id}
+          />
+        ))}
       </section>
 
       {/*   {
