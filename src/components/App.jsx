@@ -31,10 +31,9 @@ function App() {
       auth
         .checkToken(token)
         .then((user) => {
-          // ← Cambiar 'res' por 'user'
           if (user) {
             setLoggedIn(true);
-            setUserEmail(user.email); // ← Acceder directamente a user.email
+            setUserEmail(user.email);
             setCurrentUser(user); // ← Establecer el usuario completo
             navigate("/");
           }

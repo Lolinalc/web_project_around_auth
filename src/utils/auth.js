@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:3001";
+const BASE_URL = "http://api.lolinalc1.chickenkiller.com";
 
 // Función para verificar la respuesta del servidor
 const checkResponse = (res) => {
